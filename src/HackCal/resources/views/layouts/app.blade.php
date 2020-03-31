@@ -4,10 +4,13 @@
 @extends('layouts.metadata')
 
 <body>
+
     <div id="app">
-        
+
         <!-- Navbar -->
         @extends('layouts.navbar')
+
+        
         
         <main class="py-4">
             @yield('content')
