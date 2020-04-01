@@ -16,3 +16,20 @@ services:
             - 21:21
         networks: 
             - laravel
+    
+    composer:
+        image: composer:latest
+        volumes:
+            - ./src/:/www/
+        working_dir: /www/
+        networks: 
+            - laravel
+
+    npm:
+        image: node:latest
+        container_name: npm
+        volumes:
+            - ./src/:/www/
+        working_dir: /www/
+        entrypoint: ['npm']
+        networks: laravel
