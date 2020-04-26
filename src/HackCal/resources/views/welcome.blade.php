@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>HackCal</title>
+        <link rel="shortcut icon" type="image/png" href="{{ asset('img/HackCal.png') }}"/>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -92,6 +93,8 @@
             @endif
 
             <div class="content">
+                <img src="{{ asset('img/HackCal.svg') }}" alt="HackCal logo" style="max-width:10%">
+                <br><br>
                 <div class="title m-b-md">
                     HackCal
                 </div>
