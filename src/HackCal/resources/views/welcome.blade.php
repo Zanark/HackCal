@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        
         <style>
             html, body {
                 background-color: #fff;
@@ -62,7 +64,17 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <link href="{{ asset('css/custom/supportedsites.css') }}" rel="stylesheet" />
+         
+        <!-- Scripts -->
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
     </head>
+
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -81,20 +93,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    HackCal
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    @include('templates.supportedsites')
                 </div>
             </div>
         </div>
+        <script src="{{ asset('js/custom/supportedsites.js') }}" type="text/javascript"></script>
     </body>
 </html>
