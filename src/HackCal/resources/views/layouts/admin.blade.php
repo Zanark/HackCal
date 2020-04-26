@@ -50,8 +50,6 @@
                     </div>
                 </li>
             @endif
-
-
         </ul>
     </header>
 
