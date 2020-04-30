@@ -2,6 +2,8 @@
 
 Route::view('/', 'welcome');
 
+Route::view('/checkforverification', 'checkforverification');
+
 //Route::redirect('/', '/register');
 Route::get('/home', function () {
     if (session('status')) {
