@@ -13,6 +13,8 @@ Route::get('/home', function () {
 
 Auth::routes(['register' => true]);
 
+Auth::routes(['verify' => true]);
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     // Permissions
@@ -33,3 +35,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
+
+Route::get('profile', function () {
+    // Only verified users may enter...
+})->middleware('verified');
