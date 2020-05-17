@@ -1,0 +1,37 @@
+version: '3'
+
+networks: 
+    laravel:
+
+services:
+    lampp-server:
+        image: phoenixazrael/xampp
+        container_name: lampp-server
+        volumes:
+            - ./src/:/www/
+        ports:
+            - 80:80
+            - 443:443
+            - 3306:3306
+            - 21:21
+        networks: 
+            - laravel
+    
+    composer:
+        image: composer:latest
+        container_name: composer
+        volumes:
+            - ./src/:/www/
+        working_dir: /www/HackCal/
+        networks: 
+            - laravel
+
+    npm:
+        image: node:latest
+        container_name: npm
+        volumes:
+            - ./src/:/www/
+        working_dir: /www/HackCal/
+        entrypoint: ['npm']
+        networks: 
+            - laravel
