@@ -28,6 +28,12 @@ The user can provide the application with their email address and get personal n
 
     `php artisan migrate`
 
+6.  Generate the keys
+    `php artisan key:generate`
+
+7.  Seed admin user account
+    `php artisan migrate --seed`
+
 6.  Host the application
 
     `php artisan serve`
