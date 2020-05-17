@@ -9,3 +9,34 @@ The user can provide the application with their email address and get personal n
 ## Flow Chart
 
 ![flowchart](./imgs/HackCal_flowchart.png)
+
+## Installation and Testing instructions
+
+1.  Download XAMPP from the [here](https://www.apachefriends.org/download.html) or any local Apache server hosting application.
+
+2.  Make a Databased named HackCal on your MySQL server via localhost/phpmyadmin
+
+3.  Clone the the git reposiory.
+
+    `git clone https://github.com/Zanark/HackCal.git`
+
+4.  Change current directory to src/HackCal/
+
+    `cd src/HackCal/`
+
+5.  Run all migrations
+
+    `php artisan migrate`
+
+6.  Host the application
+
+    `php artisan serve`
+
+7.  Now you can register an test user account.
+
+8.  Admin credentials are:
+
+    ```
+    Email: admin@admin.com
+    Password: password
+    ```
